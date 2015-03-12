@@ -43,7 +43,7 @@ Now add the JavaScript to trigger the login:
 ```javascript
 $('.twitch-connect').click(function() {
   Twitch.login({
-    scope: ['user_read', 'channel_read']
+    scope: ['user_read', 'channel_read', 'user_follows_edit']
   });
 })
 ```
@@ -136,7 +136,7 @@ Once the user is returned to the `redirect_uri` after authorization, the SDK wil
 
 ```javascript
 Twitch.login({
-  scope: ['user_read', 'channel_read']
+  scope: ['user_read', 'channel_read', 'user_follows_edit']
 });
 
 TODO: args list, scopes, popups for advanced functionality
