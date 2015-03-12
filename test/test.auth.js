@@ -184,9 +184,9 @@ describe('Authentication', function() {
       Twitch.login({
         redirect_uri: 'http://myappurl.net',
         popup: true,
-        scope: ['user_read']
+        scope: ['user_read', 'user_follows_edit']
       });
-      lastShouldMatch('response_type=token&client_id=myclientid&redirect_uri=http%3A%2F%2Fmyappurl.net&scope=user_read');
+      lastShouldMatch('response_type=token&client_id=myclientid&redirect_uri=http%3A%2F%2Fmyappurl.net&scope=user_read+user_follows_edit');
 
       Twitch.login({
         redirect_uri: 'http://myappurl.net',
