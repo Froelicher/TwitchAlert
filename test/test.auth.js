@@ -10,12 +10,12 @@ describe('Authentication', function() {
 
     it('should extract params from location hash', function() {
       var hash = "access_token=ew35h4pk0xg7iy1" +
-             "&scope=user_read+channel_read&state=user_dayjay";
+             "&scope=user_read+channel_read+user_follows_edit&state=user_dayjay";
 
       document.location.hash = hash;
       Twitch._parseFragment().should.eql({
         token: 'ew35h4pk0xg7iy1',
-        scope: ['user_read', 'channel_read'],
+        scope: ['user_read', 'channel_read', 'user_follows_edit'],
         state: 'user_dayjay',
         error: null,
         errorDescription: null
