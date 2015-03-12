@@ -143,7 +143,7 @@ describe('Authentication', function() {
         Twitch.login({
           redirect_uri: 'http://myappurl',
           popup: false,
-          scope: []
+          scope: ['user_read', 'channel_read', 'user_follows_edit']
         });
       }).should['throw']('init() before login()');
     });
@@ -161,7 +161,7 @@ describe('Authentication', function() {
       Twitch.login({
         redirect_uri: 'http://myappurl',
         popup: true,
-        scope: []
+        scope: ['user_read', 'channel_read', 'user_follows_edit']
       });
 
       sinon.assert.calledOnce(window.open);
