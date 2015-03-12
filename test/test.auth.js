@@ -240,7 +240,7 @@ describe('Authentication', function() {
 
     before(function() {
       var hash = "access_token=ew35h4pk0xg7iy1" +
-             "&scope=user_read+channel_read&state=user_dayjay";
+             "&scope=user_read+channel_read+user_follows_edit&state=user_dayjay";
 
       document.location.hash = hash;
     });
