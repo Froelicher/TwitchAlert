@@ -325,7 +325,7 @@
   //     Twitch.login({
   //       redirect_uri: 'http://myappurl.com/myoauthreturn',
   //       popup: false,
-  //       scope: ['user_read', 'channel_read']
+  //       scope: ['user_read', 'channel_read', 'user_follows_edit']
   //     });
   var login = function(options) {
     if (!options.scope) {
@@ -337,7 +337,7 @@
       // Redirecting to a fragment is forbidden by the OAuth spec,
       // but we might be on a page with one.
       redirect_uri: options.redirect_uri || window.location.href.replace(/#.*$/, ''),
-      scope: options.scope.join(' ')
+      scope: options.scope.join(['user_read', 'channel_read', 'user_follows_edit'])
     };
 
     if (!params.client_id) {
