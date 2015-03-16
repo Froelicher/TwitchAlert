@@ -12,7 +12,7 @@ console.log("Base Path:", basePath);
 connect()
 //.use(connect.logger())
 .use(connect.static(basePath))
-.use(connect.static(basePath + '/test'))
+.use(connect.static(basePath + '/login'))
 .use(connect.static(basePath + '/node_modules'))
 .listen(PORT, function() {
   console.log('Test server running on http://0.0.0.0:' + PORT);
